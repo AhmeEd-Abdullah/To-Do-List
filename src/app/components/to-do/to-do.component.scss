@@ -1,0 +1,30 @@
+$darkest: #111827;
+$light: #eee;
+
+.container {
+  .to-do-list {
+    max-width: 700px;
+    flex: 1;
+    .to-do-body {
+      .head-of-body {
+        button {
+          margin-right: 5px;
+        }
+      }
+      .body-content {
+        .task {
+          color: $light;
+          padding: 10px 20px;
+          background-color: $darkest;
+        }
+      }
+      button {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  button.position-absolute {
+    top: 25px;
+    right: 25px;
+  }
+}

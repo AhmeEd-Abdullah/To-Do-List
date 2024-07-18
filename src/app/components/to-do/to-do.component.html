@@ -1,0 +1,36 @@
+<div class="container d-flex justify-content-center position-relative">
+    <div class="to-do-list mt-5">
+
+        <div class="to-do-head mb-5">
+            <h1 class="mb-3">Task List {{ currentDate | date : 'yyyy' }}</h1>
+            <form class="row" (ngSubmit)="addTask()">
+                <div class="col-8 col-md-10">
+                    <input type="text" placeholder="What do you have planned?" class="w-100 rounded-pill"
+                        [(ngModel)]="taskName" name="task">
+                </div>
+                <div class="col-4 col-md-2 d-flex justify-content-center align-items-center">
+                    <button>Add task</button>
+                </div>
+            </form>
+        </div>
+
+        @if (tasksList.length) {
+        <div class="to-do-body">
+            <div class="head-of-body d-flex justify-content-between align-items-center mb-3">
+                <h2 class="m-0">Tasks</h2>
+                <button (click)="clearAll()">Clear All</button>
+            </div>
+            <div class="body-content">
+                @for (task of tasksList; track $index) {
+                <div class="task d-flex justify-content-between mb-3 rounded-pill">
+                    <p class="m-0 text-capitalize">{{task}}</p>
+                    <button (click)="deleteTask($index)">Delete</button>
+                </div>
+                }
+            </div>
+        </div>
+        }
+
+    </div>
+    <button type="button" class="btn btn-danger position-absolute" (click)="onLogout()">Log Out</button>
+</div>

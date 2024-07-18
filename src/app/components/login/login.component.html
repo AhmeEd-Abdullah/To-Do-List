@@ -1,0 +1,15 @@
+<div class="container d-flex justify-content-center text-center">
+    <div class="login d-flex justify-content-center align-items-center">
+        <form class="w-100" (ngSubmit)="onLogin()">
+            <div>
+                <input type="text" placeholder="Username is  'username'" class="w-100 rounded-pill"
+                    [(ngModel)]="username" name="task">
+            </div>
+            <div>
+                <input type="password" placeholder="Password is  'password'" class="w-100 rounded-pill"
+                    [(ngModel)]="password" name="task">
+            </div>
+            <button>Login</button>
+        </form>
+    </div>
+</div>

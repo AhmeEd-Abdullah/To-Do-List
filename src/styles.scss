@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+$dark: #374151;
+$darker: #1f2937;
+$gray: #6b7280;
+$light: #eee;
+$pink: #ec4899;
+$purple: #8b5cf6;
+
+body {
+  background-color: #374151;
+}
+
+h1,
+h2 {
+  padding-left: 5px;
+  color: $gray;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  background: none;
+  appearance: none;
+}
+
+input {
+  padding: 12px 15px;
+  background-color: $darker;
+  color: $light;
+  &::placeholder {
+    color: $gray;
+  }
+}
+
+button {
+  color: $pink;
+  font-weight: 700;
+  font-size: 1.25rem;
+  background-image: linear-gradient(to right, $pink, $purple);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+}
